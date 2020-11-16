@@ -16,20 +16,21 @@ if num > 1:
        if (num % i) == 0: 
            with open("output.txt", "a") as f:
             print(num)
-            print(num, "is not a prime number", file=f) 
+            othermul = num / i
+            print(num, "is not a prime number because it is a multiple of ",i, " and", str(othermul), file=f) 
            with open("notprimes.txt", "a") as f:
-            print(num, "is not a prime number", file=f) 
+            print(num, "is not a prime number because it is a multiple of ",i, " and", str(othermul), file=f)
            break
    else: 
        with open("output.txt", "a") as f:
             print(num)
-            print("                                   ", num , "is a prime number", file=f)  
+            print("                                                                                ", num , "is a prime number", file=f)  
        with open("primes.txt", "a") as f:
             print(num , "is a prime number", file=f)  
   
 else: 
    with open("output.txt", "a") as f:
             print(num)
-            print(num, "is not a prime number", file=f) 
+            print(num, "is not a prime number because it is 1", file=f)
    with open("notprimes.txt", "a") as f:
-            print(num, "is not a prime number", file=f) 
+            print(num, "is not a prime number because it is 1", file=f) 
