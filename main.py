@@ -15,12 +15,21 @@ if num > 1:
        # 2 and n / 2, it is not prime  
        if (num % i) == 0: 
            with open("output.txt", "a") as f:
+            print(num)
+            print(num, "is not a prime number", file=f) 
+           with open("notprimes.txt", "a") as f:
             print(num, "is not a prime number", file=f) 
            break
    else: 
        with open("output.txt", "a") as f:
-            print(num, "is a prime number", file=f)  
+            print(num)
+            print("                                   ", num , "is a prime number", file=f)  
+       with open("primes.txt", "a") as f:
+            print(num , "is a prime number", file=f)  
   
 else: 
    with open("output.txt", "a") as f:
+            print(num)
+            print(num, "is not a prime number", file=f) 
+   with open("notprimes.txt", "a") as f:
             print(num, "is not a prime number", file=f) 
